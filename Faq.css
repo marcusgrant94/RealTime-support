@@ -26,7 +26,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 2rem;
-    padding: 2rem 16.2rem;
+    padding: 2rem 5rem;
 }
 
 .header-left {
@@ -56,7 +56,7 @@ body {
     font-size: 0.9rem;
     position: fixed;
     top: 4rem;
-    right: 18rem;
+    right: 3rem;
     z-index: 1000;
 }
 
@@ -70,7 +70,7 @@ body {
     font-size: 0.9rem;
     position: fixed;
     top: 4rem;
-    right: 28.5rem;
+    right: 13.5rem;
     z-index: 1000;
 }
 
@@ -84,7 +84,7 @@ body {
     font-size: 0.9rem;
     position: fixed;
     top: 4rem;
-    right: 35rem;
+    right: 20.5rem;
     z-index: 1000;
 }
 
@@ -170,11 +170,11 @@ a:hover {
 }
 
 .footer-left {
-    margin-left: 2rem;
+    margin-left: -10rem;
 }
 
 .footer-right {
-    margin-right: 2rem;
+    margin-right: -13rem;
 }
 
 .site-footer a {
