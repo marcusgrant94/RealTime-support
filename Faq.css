@@ -1,0 +1,189 @@
+/* Base color: rgb(22,29,35) = #161D23 */
+:root {
+    --bg-color: #161D23;
+    --text-color: #F5F5F5;
+    --highlight: #0066CC;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Make the body a column flex container so footer sticks to bottom */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 2rem 16.2rem;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.site-header .logo {
+    width: 125px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.beta-button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    position: fixed;
+    top: 4rem;
+    right: 18rem;
+    z-index: 1000;
+}
+
+.faq-button {
+    background-color: #808080;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    position: fixed;
+    top: 4rem;
+    right: 28.5rem;
+    z-index: 1000;
+}
+
+.contact-button {
+    background-color: #808080;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    position: fixed;
+    top: 4rem;
+    right: 35rem;
+    z-index: 1000;
+}
+
+/* Main FAQ container */
+.faqs {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1; /* Push footer down */
+}
+
+/* Page title */
+.faqs h1 {
+    color: var(--text-color);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* FAQ dropdown styling */
+.faqs .faq-item {
+    margin-bottom: 1rem;
+}
+
+.faqs .faq-question {
+    font-size: 1.25rem;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    padding: 0.75rem;
+    background-color: #2a343f; /* Slightly lighter than bg-color for contrast */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.faqs .faq-question:hover {
+    background-color: #3a454f; /* Darker on hover */
+}
+
+.faqs .faq-answer {
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    padding: 0.75rem 1rem 0.75rem 1.5rem;
+    background-color: #1e252c; /* Subtle contrast for answer */
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: none; /* Hidden by default */
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.faqs .faq-answer a {
+    color: var(--highlight);
+    text-decoration: none;
+}
+
+.faqs .faq-answer a:hover {
+    text-decoration: underline;
+}
+
+/* Show answer when active */
+.faqs .faq-item.active .faq-answer {
+    display: block;
+}
+
+a {
+    color: var(--highlight);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 16rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+.footer-left {
+    margin-left: 2rem;
+}
+
+.footer-right {
+    margin-right: 2rem;
+}
+
+.site-footer a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.site-footer a:first-child {
+    margin-left: 0;
+}
+  
