@@ -1,0 +1,243 @@
+:root {
+    --bg-color: #161D23;
+    --text-color: #F5F5F5;
+    --highlight: #0066CC;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Page transition animation */
+.page {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+body.fade-out {
+    animation: fadeOut 0.5s ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 2rem 5rem;
+    position: relative;
+    z-index: 1000;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.site-header .logo {
+    width: 125px;
+    height: auto;
+    margin-right: 1rem;
+}
+
+.beta-button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    position: fixed;
+    top: 4rem;
+    right: 3rem;
+    z-index: 1000;
+}
+
+.faq-button {
+    background-color: #808080;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    position: fixed;
+    top: 4rem;
+    right: 13.5rem;
+    z-index: 1000;
+}
+
+.contact-button {
+    background-color: #808080;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    position: fixed;
+    top: 4rem;
+    right: 20.5rem;
+    z-index: 1000;
+}
+
+.content {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
+}
+
+.terms-section {
+    margin-bottom: 2rem;
+}
+
+.terms-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--highlight);
+    display: inline-block;
+}
+
+.terms-section p {
+    line-height: 1.6;
+    margin: 0.5rem 0 1rem;
+}
+
+.terms-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 0.5rem 0 1rem;
+}
+
+.terms-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+.terms-section a {
+    color: var(--highlight);
+    text-decoration: none;
+}
+
+.terms-section a:hover {
+    text-decoration: underline;
+}
+
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 16rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+}
+
+.footer-left {
+    margin-left: -10rem;
+}
+
+.footer-right {
+    margin-right: -13rem;
+}
+
+.site-footer a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.site-footer a:first-child {
+    margin-left: 0;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 1024px) {
+    .site-header {
+        padding: 2rem;
+    }
+    .site-footer {
+        padding: 1rem 5rem;
+    }
+    .footer-left {
+        margin-left: 0;
+    }
+    .footer-right {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    .header-left {
+        margin: 0 0 1rem 0;
+    }
+    .beta-button, .faq-button, .contact-button {
+        position: static;
+        margin: 0.5rem 0;
+        right: auto;
+        top: auto;
+    }
+    .content {
+        margin: 1rem auto;
+    }
+    .site-footer {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+    .footer-left, .footer-right {
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-header {
+        padding: 1rem;
+    }
+    .site-header .logo {
+        width: 100px;
+    }
+    .beta-button, .faq-button, .contact-button {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+    .content {
+        padding: 0 0.5rem;
+    }
+    .terms-section h2 {
+        font-size: 1.2rem;
+    }
+    .terms-section p {
+        font-size: 0.9rem;
+    }
+    .site-footer {
+        padding: 0.5rem;
+    }
+}
